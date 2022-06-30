@@ -1,0 +1,38 @@
+---
+title: "Untitled"
+author: "Bas"
+date: '2022-06-30'
+output: html_document
+---
+
+```{python eval=FALSE, include=FALSE}
+# make a list of the 4 nucleotides
+Nucleotides = {"A","C","G","T"}
+
+# a function to validate if the data is indeed DNA
+def validateSeq(sequence):
+  tmpseq = sequence.upper()
+  for nuc not in Nucleotides:
+    return False
+  return tmpseq
+
+```
+
+```{python, Load data}
+# import bioinfokit.analys
+from Bio import SeqIO
+
+# import a DNA file
+DNA_sequence = list(SeqIO.parse("AIR589_pass_dbebcefe_1.fastq", "fastq"))
+
+len(DNA_sequence)
+
+DNA_sequence.get_raw.decode()
+
+print(DNA_sequence)
+
+```
+
+```{python eval=FALSE, include=FALSE}
+validateSeq(DNA_sequence)
+```
