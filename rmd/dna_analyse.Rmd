@@ -15,24 +15,12 @@ def validateSeq(sequence):
   for nuc not in Nucleotides:
     return False
   return tmpseq
-
 ```
 
-```{python, Load data}
-# import bioinfokit.analys
-from Bio import SeqIO
+```{python}
 
-# import a DNA file
-DNA_sequence = list(SeqIO.parse("AIR589_pass_dbebcefe_1.fastq", "fastq"))
+test = "AATTGC"
+test2 = "GEEN DNA"
 
-len(DNA_sequence)
-
-DNA_sequence.get_raw.decode()
-
-print(DNA_sequence)
-
-```
-
-```{python eval=FALSE, include=FALSE}
-validateSeq(DNA_sequence)
+validateSeq(test)
 ```
